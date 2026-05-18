@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delivery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <div class="logo">BRASA PRIME</div>
+
+  <nav>
+    <a href="index.html">Início</a>
+    <a href="cardapio.html">Cardápio</a>
+    <a href="delivery.html">Delivery</a>
+    <a href="reservas.html">Reservas</a>
+  </nav>
+</header>
+
+<section class="destaques" style="padding-top:150px;">
+
+  <h2>Delivery</h2>
+
+  <p style="text-align:center; margin-top:20px;">
+  Confira os itens adicionados ao carrinho abaixo.
+</p>
+</div>
+
+  </div>
+
+</section>
+<section class="carrinho">
+
+  <h2>Carrinho</h2>
+
+  <ul id="lista-carrinho"></ul>
+
+  <h3 id="total">Total: R$ 0</h3>
+  <select id="pagamento" onchange="mostrarPagamento()">
+
+  <option value="">Escolha o pagamento</option>
+
+  <option value="pix">Pix</option>
+
+  <option value="cartao">Cartão</option>
+
+  <option value="dinheiro">Dinheiro</option>
+
+</select>
+
+<!-- PIX -->
+
+<div id="pix-area" class="pagamento-box">
+
+  <h3>Pagamento via Pix</h3>
+
+  <img
+    src="https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=BrasaPrimePix"
+    alt="Pix"
+  >
+
+  <p>Chave Pix: brasaprime@email.com</p>
+
+</div>
+
+<!-- CARTÃO -->
+
+<div id="cartao-area" class="pagamento-box">
+
+  <input type="text" placeholder="Nome no cartão">
+
+  <input type="text" placeholder="Número do cartão">
+
+  <input type="text" placeholder="Validade">
+
+  <input type="text" placeholder="CVV">
+
+  <select>
+
+    <option>Crédito</option>
+
+    <option>Débito</option>
+
+  </select>
+
+</div>
+
+<!-- DINHEIRO -->
+
+<div id="dinheiro-area" class="pagamento-box">
+
+  <input
+    type="text"
+    placeholder="Troco para quanto?"
+  >
+
+</div>
+
+<button onclick="finalizarPedido()" class="finalizar">
+  Finalizar Pedido
+</button>
+
+    <option>Crédito</option>
+    <option>Débito</option>
+
+  </select>
+
+</div>
+
+  <option>Pix</option>
+  <option>Cartão</option>
+  <option>Dinheiro</option>
+
+</select>
+
+<button onclick="finalizarPedido()" class="finalizar">
+  Finalizar Pedido
+</button>
+
+</section>
+
+<script type="module" src="script.js"></script>
+    
+</body>
+</html>
